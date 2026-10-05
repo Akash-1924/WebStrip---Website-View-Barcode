@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body { margin: 0; font: 12px system-ui; width: 340px; }
+    header { padding: 8px; display: flex; gap: 6px; align-items: center; }
+    button { padding: 4px 10px; cursor: pointer; }
+    #barcode {
+      width: 100%;
+      height: 90px;
+      display: block;
+      background: #111;
+      image-rendering: pixelated;
+    }
+    #info { padding: 6px 8px; color: #555; }
+    #export {
+      margin: 4px 8px 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button id="toggle">Start</button>
+    <button id="reset">Reset</button>
+    <span id="count"></span>
+  </header>
+  <canvas id="barcode" width="600" height="90"></canvas>
+  <div id="info">Every 3s · active tab average color</div>
+  <button id="export">Export PNG</button>
+  <script src="popup.js"></script>
+</body>
+</html>
